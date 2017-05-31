@@ -1,0 +1,47 @@
+.container {
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+}
+
+.linked-in-logo {
+  color: #333;
+}
+
+.nav__icon {
+  width: 96px;
+}
+
+@media (max-width: 768px) {
+  .nav__icon {
+    width: 48px;
+  }
+}
+
+.nav__icon--small {
+  width: 48px;
+}
+
+.skills {
+  font-family: 'Coda Caption';
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+/*header {
+  font-family: 'Coda Caption';
+  font-weight: 800;
+}*/
+
+nav {
+  text-align: center;
+  margin: 30px 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+small {
+  color: #333 !important;
+}
