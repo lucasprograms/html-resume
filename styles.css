@@ -1,3 +1,24 @@
+.descriptions {
+  margin-left: 0px;
+}
+
+.underline-zone {
+  width: 25%;
+  left: 1px;
+  top: 55px;
+  position: relative;
+  border-bottom: 3px solid #333;
+  transition: left 300ms ease-in, right 300ms;
+}
+
+.email-address {
+  cursor: default;
+  width: 180px;
+  outline: none;
+  border: none;
+  height: 20px;
+}
+
 .container {
   border-left: 2px solid #333;
   border-right: 2px solid #333;
@@ -5,6 +26,10 @@
 
 .linked-in-logo {
   color: #333;
+}
+
+.job-experience__descriptions {
+
 }
 
 .nav__icon {
@@ -22,16 +47,26 @@
 }
 
 .skills {
-  font-family: 'Coda Caption';
-  font-weight: 800;
+  font-family: Oswald;
+  font-weight: 500;
   text-align: center;
   letter-spacing: 4px;
 }
 
-/*header {
-  font-family: 'Coda Caption';
-  font-weight: 800;
-}*/
+section {
+  font-family: Oswald;
+  font-weight: 300;
+}
+
+section h2 {
+  font-family: Bentham;
+}
+
+header {
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
 
 nav {
   text-align: center;
