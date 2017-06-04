@@ -2,8 +2,30 @@
   margin-left: 0px;
 }
 
+#biz-click-target {
+  transition: color, 300ms ease-in;  
+}
+
+#edu-click-target {
+  transition: color, 300ms ease-in;  
+}
+
+#info-click-target {
+  transition: color, 300ms ease-in;  
+}
+
 ul {
-  list-style: none;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+ul > li {
+  text-indent: -7px;
+}
+ul > li:before {
+  content: "- ";
+  text-indent: -5px;
 }
 
 .glyphicon-ok {
@@ -19,14 +41,43 @@ ul {
   left: 1px;
   top: 55px;
   position: relative;
-  border-bottom: 3px solid #333;
+  border-bottom: 3px solid #66f;
   transition: left 300ms ease-in, right 300ms;
+}
+
+@media (max-width: 768px) {
+  .underline-zone {
+    display: none;
+  }
+
+  .description {
+    margin-bottom: 5px;
+  }
+}
+
+.description li {
+  font-family: Bentham;
+  font-size: 1.2em;
+}
+.description p {
+  font-family: Bentham;
+  font-size: 1.2em;
 }
 
 .email-address {
   background-color: #ffa700;
   cursor: default;
   width: 180px;
+  outline: none;
+  border: none;
+  height: 20px;
+}
+
+.lower-email-address {
+  background-color: #ffa700;
+  cursor: default;
+  color: #66F;
+  width: 185px;
   outline: none;
   border: none;
   height: 20px;
@@ -45,6 +96,7 @@ ul {
 }
 
 .container {
+  min-height: 100%;
   background-color: #ffa700;  
   border-left: 2px solid #333;
   border-right: 2px solid #333;
@@ -52,10 +104,6 @@ ul {
 
 .linked-in-logo {
   color: #333;
-}
-
-.job-experience__descriptions {
-
 }
 
 .nav__icon {

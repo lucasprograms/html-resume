@@ -1,41 +1,47 @@
 $('.info-info').hide()
 $('.edu-info').hide()
+$('#biz-click-target').css('color', '#66F')
 
 $('.email-address-container').on('click', function () {
   $('.email-address').focus()
   $('.email-address').select()
 })
 
-$('#edu-click-target').click(function (evt) {
-  moveUnderlineZone($(evt.currentTarget))
+$('.lower-email-address-container').on('click', function () {
+  $('.lower-email-address').focus()
+  $('.lower-email-address').select()
+})
 
-  setTimeout(function() {
-    $('.info-info').hide()
-    $('.biz-info').hide()
-    $('.edu-info').show()
-  }, 200)
+$('#edu-click-target').click(function (evt) {
+  updateActiveInfoSection(evt, 'edu')
 })
 
 $('#info-click-target').click(function (evt) {
-  moveUnderlineZone($(evt.currentTarget))
-
-  setTimeout(function() {
-    $('.info-info').show()
-    $('.biz-info').hide()
-    $('.edu-info').hide()
-  }, 200)
+  updateActiveInfoSection(evt, 'info')
 })
 
 $('#biz-click-target').click(function (evt) {
-  moveUnderlineZone($(evt.currentTarget))
-
-  setTimeout(function() {
-    $('.info-info').hide()
-    $('.biz-info').show()
-    $('.edu-info').hide()
-  }, 200)
+  updateActiveInfoSection(evt, 'biz')
 })
 
 function moveUnderlineZone (target) {
   $('.underline-zone').css('left', target.offset().left - $('.container').offset().left - 15 + 'px')  
+}
+
+function updateActiveInfoSection (evt, activeSection) {
+  moveUnderlineZone($(evt.currentTarget))
+  var inactiveSections = ['info', 'biz', 'edu'].filter(function(section) {
+    return section !== activeSection
+  })
+
+  $('#' + activeSection + '-click-target').css('color', '#66F')
+  
+  setTimeout(function () {
+    inactiveSections.forEach(function (section) {
+      $('.' + section + '-info').hide()
+      $('#' + section + '-click-target').css('color', '#333')
+    })
+
+    $('.' + activeSection + '-info').show()
+  }, 200)
 }
