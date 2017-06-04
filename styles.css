@@ -2,6 +2,18 @@
   margin-left: 0px;
 }
 
+ul {
+  list-style: none;
+}
+
+.glyphicon-ok {
+  color: green;
+}
+
+.glyphicon-remove {
+  color: red;
+}
+
 .underline-zone {
   width: 25%;
   left: 1px;
@@ -36,7 +48,6 @@
   background-color: #ffa700;  
   border-left: 2px solid #333;
   border-right: 2px solid #333;
-  height: 100%;
 }
 
 .linked-in-logo {
