@@ -75,7 +75,7 @@ ul > li:before {
 
 .lower-email-address {
   background-color: #ffa700;
-  cursor: default;
+  cursor: pointer;
   color: #66F;
   width: 185px;
   outline: none;

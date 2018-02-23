@@ -1,3 +1,9 @@
+var myBirthday = new Date('September 21, 91 00:20:18 GMT+00:00')
+var millisecondsInYearIsh = 31536000000
+var probablyMyAge = Math.floor((Date.now() - myBirthday) / millisecondsInYearIsh)
+
+$("#my-current-age").text(probablyMyAge)
+
 $('.info-info').hide()
 $('.edu-info').hide()
 $('#biz-click-target').css('color', '#66F')
